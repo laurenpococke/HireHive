@@ -1,0 +1,276 @@
+/* ------- */
+/* COLOURS */
+/* ------- */
+:root {
+    --light-alt: #dddddd;
+    --dark-alt: #404040;
+    --light: #fff;
+    --dark: #000;
+    --standout: #FF0000;
+    --disabled: #ffffff80;
+}
+  
+  
+/* -------- */
+/* --TAGS-- */
+/* -------- */
+* {
+    margin: 0px;
+    padding: 0px;
+    border: 0;
+    font-family: 'Jost', sans-serif;
+}
+  
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+html, body {
+    min-height:100%;
+    scroll-behavior: smooth;
+}
+  
+  
+/* ------- */
+/* -LINKS- */
+/* ------- */
+a:link, a:visited, a:active {
+    color: var(--dark-alt);
+    text-decoration: none; 
+    font-weight: bolder;
+}
+
+a:hover {
+    color: var(--standout);
+    text-decoration: none; 
+}
+
+.active:hover > * {
+    pointer-events: none;
+}
+  
+  
+/* -------- */
+/* --TEXT-- */
+/* -------- */
+h1 { 
+    font-family: 'Bungee Shade', cursive;
+    font-size: 3em;
+    font-weight: bolder;
+    color: var(--light);
+} 
+
+h2 { 
+    font-family: 'Bungee Shade', cursive;
+    font-size: 2em;
+    font-weight: bolder;
+    color:var(--light);
+} 
+
+li, p {
+    font-family: 'Jost', sans-serif;
+    font-size: 1em;
+    font-weight: normal;
+    color: var(--dark);
+    line-height: 2em;
+}
+  
+  
+/* ---------- */
+/* -GRADIENT- */
+/* ---------- */
+.gradient {
+    /* gradient made with https://coolors.co/gradient-maker/ */
+    background: var(--light-alt);
+    background: linear-gradient(270deg, var(--light-alt) 20%, var(--dark-alt) 80%);
+    background: -moz-linear-gradient(270deg,var(--light-alt) 20%, var(--dark-alt) 80%);
+    background: -webkit-linear-gradient(270deg,var(--light-alt) 20%, var(--dark-alt) 80%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr=var(--light-alt), endColorstr=var(--dark-alt), GradientType=1 );
+}
+
+
+/* -------- */
+/* -GENERAL- */
+/* --------- */
+.flex {
+    display: flex;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.centre-text {
+    text-align: center;
+}
+
+.left-text {
+    text-align: left;
+}
+
+.right-text {
+    text-align: right;
+}
+
+.centre-vert {
+    align-items: center;
+}
+
+.centre-horz {
+    justify-content: center;
+}
+
+.padding {
+    padding: 10px;
+}
+
+.margin {
+    margin:10px;
+}
+
+.whole {
+    width:100%;
+}
+
+.half {
+    width:50%;
+}
+
+.distribute {
+    justify-content:space-evenly;
+}
+
+.semi {
+    height: 100%;
+}
+
+.logo {
+    max-width: 70%;
+    aspect-ratio: auto;
+}
+
+.icon { 
+    font-size: 4em !important;
+    color: var(--dark);
+}
+  
+/* --------- */
+/* -NAV BAR- */
+/* --------- */
+.nav-item {
+    width:20%;
+    font-size: 1.7em !important;
+    border-radius: 0.5em;
+}
+
+.nav-item:hover {
+    background-color: var(--standout); 
+}
+  
+.nav-item:hover > a {
+    color: var(--light)
+}
+  
+.active {
+    background-color: var(--dark) !important;
+}
+  
+/* --------- */
+/* -BUTTONS- */
+/* --------- */
+.text-button {
+    width:20%;
+    border-radius: 0.5em;
+    background-color: var(--light);
+    font-size: 1em;
+    font-weight: bolder;
+    color: var(--dark) !important;
+}
+  
+.text-button:hover {
+    background-color: var(--standout);
+    color: var(--light) !important;
+}
+  
+.text-button > a {
+    color:var(--dark);
+}
+
+.text-button:hover > a {
+    color:var(--light);
+}
+  
+.disabled {
+    background-color: var(--disabled) !important;
+    pointer-events: none;
+}
+  
+  
+/* ------- */
+/* --IDs-- */
+/* ------- */
+#header {
+    padding-top: 20px;
+    background-color: var(--light-alt);
+}
+  
+#main {
+    height:100vh;
+}
+  
+#art {
+    height: 80%;
+}
+  
+#artefact, #survey {
+    aspect-ratio: 4/3;
+}
+
+#footer {
+    height: 100vh;
+    background-color: var(--dark);
+}
+  
+#threequarters {
+    width: 75%;
+}
+  
+
+/* -------- */
+/* -MOBILE- */
+/* -------- */
+@media screen and (max-width: 640px){
+    .half {
+        width: 100%;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .nav-item {
+        width: 50%;
+    }
+
+    .mobile-distribute {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .semi {
+        height: 50%;
+    }
+
+    #footer {
+        height: auto;
+    }
+
+    #main {
+        height: auto;
+    }
+}
+  
