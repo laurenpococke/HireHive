@@ -163,7 +163,7 @@ li, p {
 /* --------- */
 .nav-item {
     width:20%;
-    font-size: 1.7em !important;
+    font-size: 1.5em !important;
     border-radius: 0.5em;
 }
 
@@ -232,7 +232,7 @@ li, p {
 
 #footer {
     height: 100vh;
-    background-color: var(--dark);
+    background-color: var(--dark-alt);
 }
   
 #threequarters {
